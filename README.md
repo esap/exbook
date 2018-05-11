@@ -6,9 +6,9 @@
 ## 交流-ESAP达摩院
 * <span style="color:red">技术讨论QQ群(ESAP-达摩院)：[365159025](http://shang.qq.com/wpa/qunwpa?idkey=130e97346aa11da4690999c9c91e3350e8673cb9c8fcf5df7c8f11d78ee73522) <<点击加入</span>
 
-* 村长Blog：[http://ylin.wang/)
+* 村长BLOG：http://ylin.wang
 
-* ESAP项目：[https://erp8.net/esap) 含任意版本ES可用的微信、短信、邮件(附件)提醒模块
+* ESAP项目：https://erp8.net/esap 含任意版本ES可用的微信、短信、邮件(附件)提醒模块
 
 ## 感谢-达摩院的大神们
 特别感谢下列筒子，排名不分先后  
