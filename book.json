@@ -1,0 +1,21 @@
+{
+	"title": "ExBook",
+    "description": "ESAP部落宝典二代,分享有关JU/NX的各种黑科技。",
+    "language": "zh-hans",
+	
+	"links" : {
+	    "sidebar" : {
+	        "官网" : "https://erp8.net"
+	    }
+	},
+    
+    "styles": {
+        "website": "styles/website.css",
+	    "ebook": "styles/ebook.css",
+	    "pdf": "styles/pdf.css",
+	    "mobi": "styles/mobi.css",
+	    "epub": "styles/epub.css"    
+     },
+    
+    "plugins": ["splitter"]      
+}
