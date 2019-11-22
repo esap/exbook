@@ -2,13 +2,13 @@
 * 一本ESAP/JUable/Nxcells应用百科全书，希望对你有帮助。
  
 ## 交流-JUable/Nxcells达摩院
-* <span style="color:red">技术讨论QQ群(达摩院)：[633167566](https://jq.qq.com/?_wv=1027&k=5MvAWmv) <<点击加入</span>
+* <span style="color:red">技术讨论QQ群(聚慧禅院)：[633167566](https://jq.qq.com/?_wv=1027&k=5MvAWmv) <<点击加入</span>
 
 * 村长BLOG：http://blog.erp8.net
 
 * ESAP项目：https://esap.erp8.net 含多种机器人，例如QQ，微信等，对接各种管理系统
 
-## 感谢-达摩院的大神们
+## 感谢-聚慧禅院的大神们
 特别感谢下列筒子，排名不分先后  
 
 |大神榜|第1章|第2章|第3章|第4章|贡献度|
