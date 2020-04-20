@@ -38,6 +38,8 @@
 
 NXCELLS可以自定义4个图标，文件在NxCells\client\img，只要把修改好的图标覆盖在服务器的对应目录，即可自动分发到客户端。
 
+> 新版是NxCells\server\img
+
 ![](./3002-1.png)
 
 杨工给建议：
