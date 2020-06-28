@@ -67,6 +67,10 @@
 
 	=SUMPRODUCT(1/COUNTIF(区域,区域))
 
+> @crosstime:
+
+![](./2.2.12.jpg)
+
 ## 计算季度
 	=TEXT(MONTH(日期单元格)*10,"[dbnum1]m季度")
 
