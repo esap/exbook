@@ -1,5 +1,45 @@
 # 3.1 SQL应用汇
 
+## SQL代理作业直接发钉钉机器人消息
+
+> @一寸超人
+
+```sql
+ALTER TRIGGER [dbo].[DDtx] 
+   ON [dbo].[ES_Witodo] 
+   AFTER INSERT
+AS 
+BEGIN    
+    SET NOCOUNT ON;    
+	declare @PostData nVARCHAR(max)  ,
+	@ResponseText VARCHAR(max) , 
+	@sql nVARCHAR(max) 
+	set @sql= ……………………  )
+set @ResponseText=''
+DECLARE @ServiceUrl   VARCHAR(1000) 
+set @ServiceUrl = N'https://oapi.dingtalk.com/robot/send?access_token=…………………………'
+set @PostData = N'{"msgtype": "markdown", "markdown": { 
+"title":"机器人", 
+"text": "
+### '+@sql+'\n'+' 
+来自**派单机器人**的通知
+" } }'  
+DECLARE @Object AS INT ,
+@status INT ,
+@returnText AS VARCHAR(8000) ,
+@HttpStatus VARCHAR(200) ,
+@HttpMethod VARCHAR(20) 
+set @HttpMethod= 'post'
+EXEC @status = sp_OACreate 'Msxml2.ServerXMLHTTP.3.0', @Object OUT;
+EXEC @status = sp_OAMethod @Object, 'open', NULL, @HttpMethod, @ServiceUrl, 'false'
+EXEC @status = sys.sp_OAMethod @Object, 'setRequestHeader', NULL, 'Content-Type', 'application/json; charset=UTF-8'
+EXEC @status = sp_OAMethod @Object, 'send', NULL, @PostData
+EXEC @status = sys.sp_OAGetProperty @Object, 'Status', @HttpStatus OUT;
+EXEC @status = sp_OAMethod @Object, 'responseText', @ResponseText OUTPUT
+EXEC @status = sp_OADestroy @Object
+print @ResponseText
+```
+
 ## 应付账款账龄计算公式
 > @简单生活  
 ```sql
