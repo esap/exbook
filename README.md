@@ -1,16 +1,19 @@
 ## EX宝典
-* 一本来自ESAP达摩院的类EXCEL平台ERP开发应用百科全书，希望对你有帮助。
+
+* 一本来自ESAP水镜禅院的类EXCEL平台ERP开发应用百科全书，希望对你有帮助。
 
 ## 交流
+
 * <span style="color:red">ESAP水镜禅院：[365159025](http://shang.qq.com/wpa/qunwpa?idkey=130e97346aa11da4690999c9c91e3350e8673cb9c8fcf5df7c8f11d78ee73522) <<点击加入QQ群</span>
 
-* <span style="color:red">JU/NX聚慧禅院：[633167566](https://jq.qq.com/?_wv=1027&k=5MvAWmv) <<点击加入QQ群</span>
+* <span style="color:red">EXAPP聚慧禅院：[633167566](https://jq.qq.com/?_wv=1027&k=5MvAWmv) <<点击加入QQ群</span>
 
 * 村长博客 [国际]：http://ylin.wang  [国内]：http://blog.erp8.net
 
 * ESAP水镜服务器 https://esap.erp8.net (含任意版本ES/NX的微信、短信、邮件(附件)提醒模块)  
 
 ## 感谢-达摩院的大神们
+
 特别感谢下列筒子，排名不分先后  
 
 |大神榜|第1章|第2章|第3章|第4章|第5章|第6章|贡献度|
@@ -71,7 +74,8 @@
 |万年驾校老兵	||||||![6][b]![6][b]![6][b]|12|
 |昆明-伤疤也微笑 |![1.2][c]|||||![6][b]|5|
 |李乐东 |||||![6][b]|![6][c]|5|
-|**总 计**|-|-|-|-|-|-|262|
+|芳草无情 |![1.2][c]||||||1|
+|**总 计**|-|-|-|-|-|-|263|
 
 [c]:/images/c.png "+1"
 [b]:/images/b.png "+4"
@@ -79,10 +83,12 @@
 [s]:/images/s.png "+64"
 
 ## 许可
+
 Book License: [CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/)
 
 Code License: [BSD 3-Clause License](LICENSE.md)
 
 ## 我的奋斗
 * 与君共勉
+
 ![](/images/fight.png)
