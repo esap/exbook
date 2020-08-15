@@ -82,11 +82,12 @@
 
 * [6.其它分享](c6/00/)
 
- * [APP违章查询](c6/08/)
- * [APP身份证自动识别](c6/09/)
- * [拥抱AI，玩转ESAP实现人脸识别](c6/10/)
- * [NX界面DIY](c6/11/)
- * [NXCELLS修改图标经验分享](c6/12/)
+ * [6.8 APP违章查询](c6/08/) <div color="red">new!</div>
+ * [6.0 APP身份证自动识别](c6/09/) <div color="red">new!</div>
+ * [6.10 拥抱AI，玩转ESAP实现人脸识别](c6/10/) <div color="red">new!</div>
+ * [6.11 NX界面DIY](c6/11/) <div color="red">new!</div>
+ * [6.12 NX修改图标经验分享](c6/12/) <div color="red">new!</div>
+ * [6.13 NX高拍仪对接经验分享](c6/13/) <div color="red">new!</div>
  * [6.1 模板配色、功能欣赏](c6/01/)
  * [6.2 全国省市区镇数据](c6/02/)
  * [6.3 调用摄像头拍照](c6/03/)
