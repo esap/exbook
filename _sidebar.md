@@ -88,6 +88,7 @@
  * [6.11 NX界面DIY<span style="color:red">new!</span>](c6/11/)
  * [6.12 NX修改图标经验分享<span style="color:red">new!</span>](c6/12/)
  * [6.13 NX高拍仪对接经验分享<span style="color:red">new!</span>](c6/13/)
+ * [6.14 NX电子秤对接经验分享<span style="color:red">new!</span>](c6/14/)
  * [6.1 模板配色、功能欣赏](c6/01/)
  * [6.2 全国省市区镇数据](c6/02/)
  * [6.3 调用摄像头拍照](c6/03/)
