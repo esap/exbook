@@ -1,7 +1,22 @@
-# 3.8 ES存储图片的机制
+# 3.8 存储图片的机制
+
+## NX机制
+
+![](./3.8-2.jpg)
+
+#### 字段简析
+* FileID			文件ID(含图片/附件)
+* RecordID			表单ID
+* FileName			文件名
+* FileBinary		文件(二进制)
+* DIR			    文件目录
+
+## ES机制
+
 ![](./3.8.jpg)
-### 字段简析
-* rcid			表单的ExcelServerRCID
+
+#### 字段简析
+* rcid			表单ID
 * rtfid			图片字段的系统id
 * sh			图片字段的sheet
 * r				图片字段的row，行号
