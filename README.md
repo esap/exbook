@@ -2,6 +2,8 @@
 
 * 一本来自ESAP水镜禅院的类EXCEL平台ERP开发应用百科全书，希望对你有帮助。
 
+<span style="color:red">【B站ERP开发精粹视频教程】</span>：[https://space.bilibili.com/399421687](https://space.bilibili.com/399421687)
+
 ## 交流
 
 * <span style="color:red">ESAP水镜禅院：[365159025](http://shang.qq.com/wpa/qunwpa?idkey=130e97346aa11da4690999c9c91e3350e8673cb9c8fcf5df7c8f11d78ee73522) <<点击加入QQ群</span>
@@ -91,8 +93,6 @@ Book License: [CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3
 Code License: [BSD 3-Clause License](LICENSE.md)
 
 ## 我的奋斗
-* 人生苦短，我用NX
-
-B站精粹视频教程：[https://space.bilibili.com/399421687](https://space.bilibili.com/399421687)
+与君共勉
 
 ![](/images/fight.png)
