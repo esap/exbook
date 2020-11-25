@@ -91,6 +91,8 @@ Book License: [CC BY-SA 3.0 License](http://creativecommons.org/licenses/by-sa/3
 Code License: [BSD 3-Clause License](LICENSE.md)
 
 ## 我的奋斗
-* 与君共勉
+* 人生苦短，我用NX
+
+B站精粹视频教程：[https://space.bilibili.com/399421687](https://space.bilibili.com/399421687)
 
 ![](/images/fight.png)
