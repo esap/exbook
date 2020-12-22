@@ -27,6 +27,49 @@ update 明细表
 		,sequence=excelserverrn
 ```
 
+## ES图片附件迁移到JU/NX (原表映射法)
+在ES表原表增加NX图片字段，例如`员工信息表`中加入`pic`，原来的照片字段假设叫`照片`，在NX中建立模板，映射到员工信息表，照片字段映射到pic
+```sql
+--先把照片转化刷到pic字段，因为pic_I是int类型，需要用cast()
+update 员工信息表
+set pic=-cast(stuff(substring(照片,5,100),6,1,'') as int)
+,pic_I=-cast(stuff(substring(照片,5,100),6,1,'') as int)
+--插入图片系统表记录，即从ES_CasePic表迁移到JU_FileInfo
+insert JU_FileInfo
+select -cast(stuff(substring(picno,5,100),6,1,'') as int)
+	,j.RecordID
+	,'-'+stuff(substring(picno,5,100),6,1,'')+p.fileType
+	,img
+	,'20201222' --这个是JU/NX网盘目录，随便设置，例如当前日期
+from esap..ES_CasePic p
+inner join 员工信息表 j on -cast(stuff(substring(picno,5,100),6,1,'') as int) =j.pic
+--如果ES开了网盘，img是null,需要从网盘读文件导入
+declare cur cursor for select -cast(stuff(substring(picno,5,100),6,1,'') as int) as fileid
+	,concat('E:\esDisk\',p.RelaFolder,'\',p.PhyFileName) fp
+from ES_CasePic p
+inner join 员工信息表 j on -cast(stuff(substring(picno,5,100),6,1,'') as int) =j.pic
+where img is null
+
+declare @s varchar(max);
+declare @id int;
+declare @fp  nvarchar(100);
+set @s = '';
+open cur;--打开指针
+fetch next from cur into @id, @fp;
+while (@@FETCH_STATUS = 0)
+begin
+    set @s = concat('update JU_FileInfo
+set FileBinary=(
+	SELECT * FROM 
+	OPENROWSET(BULK ''',@fp,''', SINGLE_BLOB) as ors)
+where FileID = ',@id)
+    exec(@s);
+    fetch next from cur into @id, @fp;--指针下移
+end
+close cur;--关闭指针
+deallocate cur;--释放指针
+```
+
 ## ES图片附件迁移到JU/NX
 
 ```sql
