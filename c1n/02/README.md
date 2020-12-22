@@ -31,25 +31,24 @@ update 明细表
 在ES表原表增加NX图片字段，例如`员工信息表`中加入`pic`，原来的照片字段假设叫`照片`，在NX中建立模板，映射到员工信息表，照片字段映射到pic
 ```sql
 --先把照片转化刷到pic字段，因为pic_I是int类型，需要用cast()
-update 员工信息表
-set pic=-cast(stuff(substring(照片,5,100),6,1,'') as int)
-,pic_I=-cast(stuff(substring(照片,5,100),6,1,'') as int)
+update 员工信息表                                           --【员工信息表】改成要更新的表
+set pic=-cast(stuff(substring(照片,5,100),6,1,'') as int)  --【pic】改成NX图片字段，【照片】改成ES图片字段
+,pic_I=-cast(stuff(substring(照片,5,100),6,1,'') as int)   --【pic_I】改成NX图片字段，【照片】改成ES图片字段
 --插入图片系统表记录，即从ES_CasePic表迁移到JU_FileInfo
 insert JU_FileInfo
 select -cast(stuff(substring(picno,5,100),6,1,'') as int)
 	,j.RecordID
 	,'-'+stuff(substring(picno,5,100),6,1,'')+p.fileType
 	,img
-	,'20201222' --这个是JU/NX网盘目录，随便设置，例如当前日期
+	,'20201222'                                            --【20201222】改成当前日期年月日    
 from esap..ES_CasePic p
-inner join 员工信息表 j on -cast(stuff(substring(picno,5,100),6,1,'') as int) =j.pic
+inner join 员工信息表 j on -cast(stuff(substring(picno,5,100),6,1,'') as int) =j.pic --【员工信息表】改成要更新的表，【pic】改成NX图片字段
 --如果ES开了网盘，img是null,需要从网盘读文件导入
 declare cur cursor for select -cast(stuff(substring(picno,5,100),6,1,'') as int) as fileid
-	,concat('E:\esDisk\',p.RelaFolder,'\',p.PhyFileName) fp
+	,concat('E:\esDisk\',p.RelaFolder,'\',p.PhyFileName) fp    --【E:\esDisk\】原ES网盘根目录
 from ES_CasePic p
-inner join 员工信息表 j on -cast(stuff(substring(picno,5,100),6,1,'') as int) =j.pic
+inner join 员工信息表 j on -cast(stuff(substring(picno,5,100),6,1,'') as int) =j.pic --【员工信息表】改成要更新的表，【pic】改成NX图片字段
 where img is null
-
 declare @s varchar(max);
 declare @id int;
 declare @fp  nvarchar(100);
