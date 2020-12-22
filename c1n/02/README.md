@@ -18,12 +18,12 @@ SSMS种运行nxcells/server/upgrade/usql/下的：
 ```sql
 --补充主表
 update 主表
-	set recordid=stuff(stuff(excelserverrcid,1,4,'-'),8,2,'')
+	set recordid=stuff(stuff(excelserverrcid,1,4,'-'),8,1,'')
 		,createtime=cast(substring(excelserverrcid,3,8) as datetime)
 go
 --补充明细
 update 明细表
-	set recordid=stuff(stuff(excelserverrcid,1,4,'-'),8,2,'')
+	set recordid=stuff(stuff(excelserverrcid,1,4,'-'),8,1,'')
 		,sequence=excelserverrn
 ```
 
@@ -386,14 +386,14 @@ select 'stopfrp','stopfrp',N'{{if run "frp/stop.bat"}}select N''失败''{{else}}
 
 办理的步骤：
 
-* SELECT * FROM JU_WorkflowTask WHERE TaskID = ？  找到任务 ，检查任务状态，锁状态，办理人
+* SELECT * FROM JU_WorkflowTask WHERE TaskID = ?  找到任务 ，检查任务状态，锁状态，办理人
 
 * SELECT LockStatus FROM JUT110 WHERE RecordID IN (SELECT RecordID FROM JU_WorkflowTask WHERE TaskID = ? )   检查任务对应的报表的锁状态 
 
-* UPDATE JU_AlertMessage SET MsgState = 0 WHERE MsgRefID = ？);
+* UPDATE JU_AlertMessage SET MsgState = 0 WHERE MsgRefID = ?);
             //办理之后将消息设置成已阅状态
 
-* UPDATE JU_Message set ReadTime=getdate(),MsgStatus =1 where MsgType = 1 and RefExpr = ？    将任务关联消息状态改变 。
+* UPDATE JU_Message set ReadTime=getdate(),MsgStatus =1 where MsgType = 1 and RefExpr = ?    将任务关联消息状态改变 。
 
 * UPDATE JU_WorkflowTask SET Locked ={0} , DealUser ={1} WHERE TaskID ={2}   给任务加上处理锁 
 
