@@ -1,6 +1,6 @@
 # 常见问题与技巧
 
-## 转换ES库到NX库
+## 转换ES库到NX库(骑库大法第一步)
 
 SSMS种运行nxcells/server/upgrade/usql/下的：
 
@@ -11,7 +11,7 @@ SSMS种运行nxcells/server/upgrade/usql/下的：
 
 完成系统表注入和初始化，就可以直接新建NX账套，挂载ES库了，其他SAP/金蝶/用友同理。
 
-## 映射已有ES表到NX工作台直接显示
+## 映射已有ES表到NX工作台直接显示(骑库大法第二步)
 
 主要是补充主表的recordid+createtime，明细的recordid+sequence
 
@@ -27,7 +27,7 @@ update 明细表
 		,sequence=excelserverrn
 ```
 
-## ES图片附件迁移到JU/NX (原表映射法)
+## ES图片附件迁移到JU/NX (原表映射法，骑库大法第三步))
 在ES表原表增加NX图片字段，例如`员工信息表`中加入`pic`，原来的照片字段假设叫`照片`，在NX中建立模板，映射到员工信息表，照片字段映射到pic
 ```sql
 --先把照片转化刷到pic字段，因为pic_I是int类型，需要用cast()
