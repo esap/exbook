@@ -426,8 +426,8 @@ select 'stopfrp','stopfrp',N'{{if run "frp/stop.bat"}}select N''失败''{{else}}
 如果勾选过主表字段 ，就默认你得勾选 。  否则主表字段都给默认模糊
 ```sql
 --主表模糊查询兼容
-UPDATE JU_TemplateTableField SET  AllowLikeSearch = 1 WHERE Hidden = 0 and Created = 1 and TableID in(
-select TableID from JU_TemplateTable where Created = 1 and TableType = 0) and TableID not in(
-SELECT distinct TableID FROM JU_TemplateTableField WHERE AllowLikeSearch = 1 and Hidden = 0 and Created = 1 and TableID in(
-select TableID from JU_TemplateTable where Created = 1 and TableType = 0))
+UPDATE JU_TemplateTableField SET  AllowLikeSearch = 1 WHERE Hidden = 0 and Created >= 1 and TableID in(
+select TableID from JU_TemplateTable where Created >= 1 and TableType = 0) and TableID not in(
+SELECT distinct TableID FROM JU_TemplateTableField WHERE AllowLikeSearch = 1 and Hidden = 0 and Created >= 1 and TableID in(
+select TableID from JU_TemplateTable where Created >= 1 and TableType = 0))
 ```
