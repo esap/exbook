@@ -1,18 +1,18 @@
 ## EX宝典
 
-* 一本来自ESAP水镜禅院的类EXCEL平台ERP开发应用百科全书，希望对你有帮助。
+* 一本来自ESAP尹联禅院的类EXCEL平台ERP开发应用百科全书，希望对你有帮助。
 
 <span style="color:red">【B站ERP开发精粹视频教程】</span>：[https://space.bilibili.com/399421687](https://space.bilibili.com/399421687)
 
 ## 交流
 
-* <span style="color:red">ESAP水镜禅院：[365159025](http://shang.qq.com/wpa/qunwpa?idkey=130e97346aa11da4690999c9c91e3350e8673cb9c8fcf5df7c8f11d78ee73522) <<点击加入QQ群</span>
+* <span style="color:red">ESAP尹联禅院：[365159025](http://shang.qq.com/wpa/qunwpa?idkey=130e97346aa11da4690999c9c91e3350e8673cb9c8fcf5df7c8f11d78ee73522) <<点击加入QQ群</span>
 
 * <span style="color:red">EXAPP聚慧禅院：[633167566](https://jq.qq.com/?_wv=1027&k=5MvAWmv) <<点击加入QQ群</span>
 
 * 村长博客 [国际]：http://ylin.wang  [国内]：http://blog.erp8.net
 
-* ESAP水镜服务器 https://esap.erp8.net (含任意版本ES/NX的微信、短信、邮件(附件)提醒模块)  
+* 尹联®系统 https://esap.erp8.net (含任意版本ES/NX的微信、短信、邮件(附件)提醒模块)  
 
 ## 感谢-达摩院的大神们
 
