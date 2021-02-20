@@ -431,3 +431,10 @@ select TableID from JU_TemplateTable where Created >= 1 and TableType = 0) and T
 SELECT distinct TableID FROM JU_TemplateTableField WHERE AllowLikeSearch = 1 and Hidden = 0 and Created >= 1 and TableID in(
 select TableID from JU_TemplateTable where Created >= 1 and TableType = 0))
 ```
+
+## 一句话作业备份，可整理外库
+
+![](./1002-bak.png)`
+
+作业定时执行
+![](./1002-bak2.png)`
