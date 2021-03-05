@@ -90,6 +90,28 @@ inner join 新表 j on cast(stuff(substring(p.picno,4,100),7,1,'') as int) =j.�
 --select * from JU_FileInfo
 ```
 
+## 删除ES系统表、视图、存储过程
+```sql
+IF object_id('tempdb..#ScanTmp') IS NOT NULL    
+	DROP TABLE #ScanTmp 
+GO 
+CREATE TABLE #ScanTmp ( NAME varchar(100),rowid int identity(1,1)) 
+INSERT INTO #ScanTmp  
+	SELECT concat('drop ', iif(xtype='p','proc ',iif(xtype='v', 'view ','table ')),name) FROM SYSOBJECTS WHERE left(NAME,3)='es_' 
+GO 
+DECLARE @TmpNo int --序号 
+DECLARE @MaxNo int --最大数 
+DECLARE @SQL varchar(100)   
+SET @MaxNo=@@ROWCOUNT 
+SET @TmpNo=1  
+WHILE (@TmpNo<=@MaxNo)      --遍历 
+BEGIN 
+SET @SQL=(SELECT NAME FROM #ScanTmp WHERE rowid=@TmpNo) --执行删除语句 
+EXEC ( @SQL ) 
+SET @TmpNo=@TmpNo+1 
+END 
+```
+
 ## NX中的插件包
 自定义菜单等功能需要插件包，下载CEF包等后解压到`server/package`，重启服务即可。
 
