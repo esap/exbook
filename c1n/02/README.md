@@ -97,7 +97,8 @@ IF object_id('tempdb..#ScanTmp') IS NOT NULL
 GO 
 CREATE TABLE #ScanTmp ( NAME varchar(100),rowid int identity(1,1)) 
 INSERT INTO #ScanTmp  
-	SELECT concat('drop ', iif(xtype='p','proc ',iif(xtype='v', 'view ','table ')),name) FROM SYSOBJECTS WHERE left(NAME,3)='es_' 
+	SELECT concat('drop ', iif(xtype='p','proc ',iif(xtype='v', 'view ','table ')),name) 
+	FROM SYSOBJECTS WHERE left(NAME,3)='es_' 
 GO 
 DECLARE @TmpNo int --序号 
 DECLARE @MaxNo int --最大数 
