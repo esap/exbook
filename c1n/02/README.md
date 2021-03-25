@@ -455,9 +455,21 @@ SELECT distinct TableID FROM JU_TemplateTableField WHERE AllowLikeSearch = 1 and
 select TableID from JU_TemplateTable where Created >= 1 and TableType = 0))
 ```
 
+## 查询有那些服务器使用了当前库
+如果勾选过主表字段 ，就默认你得勾选 。  否则主表字段都给默认模糊
+```sql
+--主表模糊查询兼容
+select t2.name as 数据库名,t3.client_net_address as ip地址,
+t1.host_name as 电脑名 
+from master.sys.dm_exec_sessions t1
+inner join master.dbo.SYSDATABASES t2 on t1.database_id=t2.dbid
+inner join master.sys.dm_exec_connections t3 on t1.session_id=t3.session_id where t2.name = 'nxcells' --nxcells改成自己的库
+```
+
 ## 一句话作业备份，可整理外库
 
 ![](./1002-bak.png)`
 
 作业定时执行
 ![](./1002-bak2.png)`
+
