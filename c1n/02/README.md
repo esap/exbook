@@ -468,8 +468,16 @@ inner join master.sys.dm_exec_connections t3 on t1.session_id=t3.session_id wher
 
 ## 一句话作业备份，可整理外库
 
-![](./1002-bak.png)`
+![](./1002-bak.png)
 
 作业定时执行
-![](./1002-bak2.png)`
+![](./1002-bak2.png)
 
+## 序号函数
+> @crosstime:提供一个序号函数 
+配合表唯一字段排序使用 可得到正常序号
+dense_rank() over(order by 表唯一字段)
+配合表不唯一字段排序使用
+dense_rank() over(order by 表不唯一字段) 可得到便于合并的相同顺序号
+
+![](./1002-rnFn.jpg)
