@@ -480,6 +480,6 @@ dense_rank() over(order by 表唯一字段)
 配合表不唯一字段排序使用
 dense_rank() over(order by 表不唯一字段) 可得到便于合并的相同顺序号
 
-<img src="./1002-rnFn.jpg" width="320">
+<img src="c1n/02/1002-rnFn.jpg" width="320">
 
 > tips:相似功能函数列表：ROW_NUMBER、RANK、DENSE_RANK、NTILE
