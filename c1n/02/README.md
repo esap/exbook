@@ -362,7 +362,7 @@ deallocate tb_cur
 --清空业务表数据
 declare @tableName nvarchar(128) 
 declare @sql varchar(2048)
-declare tb_cur cursor for select TableName from JU_TemplateTable where TableType in(0,1,2) and (Created = 1 or Created = 2) and tablename not in('字典表','字典表s','状态表','帮助表','帮助表s')
+declare tb_cur cursor for select distinct TableName from JU_TemplateTable where TableType in(0,1,2) and (Created = 1 or Created = 2) and tablename not in('字典表','字典表s','状态表','帮助表','帮助表s')
 open tb_cur
 fetch next from tb_cur into @tableName 
   while (@@fetch_status=0) 
