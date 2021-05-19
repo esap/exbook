@@ -359,20 +359,58 @@ deallocate tb_cur
 ## 一键初始化(洗库)
 
 ```sql
-declare @sql nvarchar(512)
-declare @tableName nvarchar(64)  
-declare @fieldName nvarchar(64)  
-declare tb_cur cursor for select f.FieldName,t.TableName from JU_TemplateTableField f join JU_TemplateTable t on f.TableID = t.TableID where (f.BaseDataType = 5 or f.BaseDataType = 6) and t.Created<>0 and f.Created<>0
+--清空业务表数据
+declare @tableName nvarchar(128) 
+declare @sql varchar(2048)
+declare tb_cur cursor for select TableName from JU_TemplateTable where TableType in(0,1,2) and (Created = 1 or Created = 2) and tablename not in('字典表','字典表s','状态表','帮助表','帮助表s')
 open tb_cur
-fetch next from tb_cur into @fieldName,@tableName 
-  while (@@fetch_status=0)  
-  begin
-	set @sql = 'if col_length('''+@tablename+''','''+@fieldName+''') is not null  alter table ' + @tablename + ' alter column '+ @fieldName + ' nvarchar(128);'; 
-	print @sql
-    fetch next from tb_cur into @fieldName,@tableName 
+fetch next from tb_cur into @tableName 
+  while (@@fetch_status=0) 
+  begin 
+	set @sql = 'if exists (select * from sys.tables where name='''+ @tableName+ ''') truncate table '+@tableName  
+	--exec(@sql)
+	print(@sql)
+    fetch next from tb_cur into @tableName 
   end 
 close tb_cur 
-deallocate tb_cur 
+deallocate tb_cur
+--清除消息过程表
+truncate table JU_AlertMessage
+truncate table JU_AlertRun
+truncate table JU_AutoCodeDisused
+truncate table JU_AutoCodeRegister
+truncate table JU_AutoReportRun
+truncate table JU_BackupPlan
+truncate table JU_BaiduFaceIdentify
+truncate table JU_FileInfo
+truncate table JU_Message
+truncate table JU_SMS
+truncate table JU_SysLog
+truncate table JU_SysDebugLog
+truncate table JU_WebChatMsg
+truncate table JU_WeChatMessage
+truncate table JU_WeChatPay 
+truncate table JU_WorkflowInstance
+truncate table JU_WorkflowTask
+truncate table JU_WorkflowTaskLog
+--复原种子
+update JU_ReportSeed set Seed = 100 
+update JU_Seed set Seed = 100 where Keyword = 'JU_Report.RecordID'
+update JU_Seed set Seed = 100 where Keyword = 'JU_AlertMessage.AlertMsgID'
+update JU_Seed set Seed = 100 where Keyword = 'JU_AlertRun.AlertID'
+update JU_Seed set Seed = 100 where Keyword = 'JU_AutoCodeDisused.DisusedID'
+update JU_Seed set Seed = 100 where Keyword = 'JU_AutoCodeRegister.AutoCodeID'
+update JU_Seed set Seed = 100 where Keyword = 'JU_AutoReportRun.AutoRunID'
+update JU_Seed set Seed = 100 where Keyword = 'JU_BackupPlan.PlanID'
+update JU_Seed set Seed = 100 where Keyword = 'JU_FileInfo.FileID'
+update JU_Seed set Seed = 100 where Keyword = 'JU_Message.MessageID'
+update JU_Seed set Seed = 100 where Keyword = 'JU_SMS.MsgID'
+update JU_Seed set Seed = 100 where Keyword = 'JU_SysLog.LogID'
+update JU_Seed set Seed = 100 where Keyword = 'JU_WebChatMsg.JUMsgID'
+update JU_Seed set Seed = 100 where Keyword = 'JU_WeChatMessage.MsgId'
+update JU_Seed set Seed = 100 where Keyword = 'JU_WorkflowInstance.InstanceID'
+update JU_Seed set Seed = 100 where Keyword = 'JU_WorkflowTask.TaskID'
+update JU_Seed set Seed = 100 where Keyword = 'JU_WorkflowTaskLog.WorkflowLogID' 
 ```
 
 ## 模板异常：office检查到此文件存在一个问题。要帮助保护您的计算机，不能打开此文件。
