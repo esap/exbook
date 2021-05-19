@@ -368,7 +368,7 @@ fetch next from tb_cur into @tableName
   while (@@fetch_status=0) 
   begin 
 	set @sql = 'if exists (select * from sys.tables where name='''+ @tableName+ ''') truncate table '+@tableName  
-	--exec(@sql)
+	exec(@sql)
 	print(@sql)
     fetch next from tb_cur into @tableName 
   end 
