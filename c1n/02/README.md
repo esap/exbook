@@ -521,3 +521,13 @@ dense_rank() over(order by 表不唯一字段) 可得到便于合并的相同顺
 <img src="c1n/02/1002-rnFn.jpg" width="320">
 
 > tips:相似功能函数列表：ROW_NUMBER、RANK、DENSE_RANK、NTILE
+
+## 强行转换文本到整型
+> @村长:例如早期的`RN`字段设置是文本nvarchar(128)，现在改成整型int
+
+如果管理数据表里设置失败，可以sql强刷JU_TemplateTableField，然后在ssms中修改表字段类型到int 
+
+```
+  update [JU_TemplateTableField] set basedatatype=3,datatypeid=3,FieldLength=32
+  where FieldName='rn'
+```
