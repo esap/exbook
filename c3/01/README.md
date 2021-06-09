@@ -205,3 +205,23 @@ select id,name,fullname from iName2 --求得全称
 ![](./3.1.5.png)
 
 >@清风 直接写SQL，注意路径：[外部数据源名称].[数据库实体名].[表]
+
+## 查询SQL耗时高的操作（后期优化必备）
+
+```
+SELECT TOP 20
+    total_worker_time/1000 AS [总消耗CPU 时间(ms)],execution_count [运行次数],
+    qs.total_worker_time/qs.execution_count/1000 AS [平均消耗CPU 时间(ms)],
+    last_execution_time AS [最后一次执行时间],max_worker_time /1000 AS [最大执行时间(ms)],
+    SUBSTRING(qt.text,qs.statement_start_offset/2+1, 
+        (CASE WHEN qs.statement_end_offset = -1 
+        THEN DATALENGTH(qt.text) 
+        ELSE qs.statement_end_offset END -qs.statement_start_offset)/2 + 1) 
+    AS [使用CPU的语法], qt.text [完整语法],
+    dbname=db_name(qt.dbid),
+    object_name(qt.objectid,qt.dbid) ObjectName
+FROM sys.dm_exec_query_stats qs WITH(nolock)
+CROSS apply sys.dm_exec_sql_text(qs.sql_handle) AS qt
+WHERE execution_count>1
+ORDER BY  total_worker_time DESC
+```
