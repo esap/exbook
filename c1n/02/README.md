@@ -531,3 +531,8 @@ dense_rank() over(order by 表不唯一字段) 可得到便于合并的相同顺
   update [JU_TemplateTableField] set basedatatype=3,datatypeid=3,FieldLength=32
   where FieldName='rn'
 ```
+
+## NEVAL()函数技巧
+> @火星人:支持js正则`=neval(neval("function aaa(s){ var reg = /[0-9\*]+/g;var arr = reg.exec(s);return arr[0];} aaa('" & G6 & "')"))`
+
+<img src="c1n/02/1002-neval.png" width="320">
