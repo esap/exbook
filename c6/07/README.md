@@ -1,6 +1,6 @@
 # 6.7 各种VBA资料打包
 
-<a href="./6.7.rar" download>打包下载</a>
+[Excel下载](c6/07/6.7.rar ':ignore')
 
 ### 本节贡献者
 *@崽团*

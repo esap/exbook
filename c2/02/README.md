@@ -21,37 +21,37 @@
 ## 玩转日期加减滚动
 ![](./2.2.2.jpg)
 
-<a href="../src/2.2.2.xlsx" download>Excel下载</a>
+[Excel下载](c2/02/2.2.2.xlsx ':ignore')
 
 ## EXCEL也能百度一下
 ![](./2.2.3.jpg)
 
-<a href="../src/2.2.3.xlsx" download>Excel下载</a>
+[Excel下载](c2/02/2.2.3.xlsx ':ignore')
 
 ## 像素圆角(不用插入图形也能画圆角矩形)
 ![](./2.2.4.jpg)
 
-<a href="../src/2.2.4.xls" download>Excel下载</a>
+[Excel下载](c2/02/2.2.4.xls ':ignore')
 
 ## 甘特图生成器(项目进度管理)
 ![](./2.2.5.jpg)
 
-<a href="../src/2.2.5.xls" download>Excel下载</a>
+[Excel下载](c2/02/2.2.5.xls ':ignore')
 
 ## 输入时逐步提示信息(两个及以上)
 ![](./2.2.6.jpg)
 
-<a href="../src/2.2.6.xls" download>Excel下载</a>
+[Excel下载](c2/02/2.2.6.xls ':ignore')
 
 ## 函数打印条形码示例
 ![](./2.2.7.jpg)
 
-<a href="../src/2.2.7.xls" download>Excel下载</a>
+[Excel下载](c2/02/2.2.7.xls ':ignore')
 
 ## 表格实现凹凸按钮效果
 ![](./2.2.8.jpg)
 
-<a href="../src/2.2.8.xls" download>Excel下载</a>
+[Excel下载](c2/02/2.2.8.xlsx ':ignore')
 
 ## 计算一个月有多少天
 ![](./2.2.9.jpg)
@@ -60,7 +60,7 @@
 > @柳亚子  
 ![](./2.2.10.png)
 
-<a href="../src/2.2.10.xlsx" download>Excel下载</a>
+[Excel下载](c2/02/2.2.10.xlsx ':ignore')
 
 ## 唯一计数
 区域文字的唯一计数

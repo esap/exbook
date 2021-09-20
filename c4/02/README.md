@@ -23,7 +23,7 @@ Function yw(str As String)			'yw获取英文
 End Function
 ```
 
-- 另一个版本<a href="../src/4.2.xls" download>Excel下载</a>
+- 另一个版本[Excel下载](c4/02/4.2.xls ':ignore')
 
 ### 本节贡献者
 *@heming*

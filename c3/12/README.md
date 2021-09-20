@@ -139,7 +139,7 @@ CREATE AGGREGATE [dbo].[StrJoin] (@Value [nvarchar](MAX),
 ***PS2：据说MYSQL和Oracle其实都有现成的group_contact 和 wm_concat，所以到了SQLSERVER2012,据说也支持了字符串聚合的函数。但是在使用2012之前，等于是用第三种方法提前体验了而已。***
 
 ### 相关附件下载
-<a href="./sqlUtil.dll" download>dll下载</a>
+[附件dll下载](c3/12/sqlUtil.dll ':ignore')
 
 ### 本节贡献者
 *@Meteor*  

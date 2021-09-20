@@ -3,4 +3,4 @@
 
 ![](./4.10.1.jpg)
 
-<a href="../src/4.10.2.xls" download>Excel下载</a>
+[Excel下载](c4/10/4.10.2.xls ':ignore')

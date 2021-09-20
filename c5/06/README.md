@@ -9,7 +9,7 @@
 
 ![](./5.6.2.jpg?raw=true)
 
-<a href="./5.6.3.zip" download>模板下载</a>
+[模板下载](c5/06/5.6.3.zip ':ignore')
 
 ### 本节贡献者
 *@Castle*

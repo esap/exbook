@@ -171,7 +171,8 @@ Private Sub CommandButton1_Click()
    Range(AAAA).Activate
 End Sub
 ```
-<a href="../src/4.11.11.xls" download>Excel下载</a>
+
+[Excel下载](c4/11/4.11.11.xls ':ignore')
 
 ## 数据透视表刷新
 ```vb
@@ -360,12 +361,13 @@ End Sub
 ## 通过扫描仪连续执行扫描的例子
 ![](./4.11.gif)
 
-<a href="../src/4.11.xls" download>Excel下载</a>  
+[Excel下载](c4/11/4.11.1.xls ':ignore')
+
 
 ## 从sql读取数据并显示的例子
 直接用VBA从数据库取数，纯EXCEL也能做到，不过数据库连接参数会暴露在代码中，不如用ES存储过程接口安全
 
-<a href="../src/4.11.2.xls" download>Excel下载</a>  
+[Excel下载](c4/11/4.11.2.xls ':ignore') 
 
 ## 从sql读取图片数据流并显示的例子
 如果ES不开启网盘，图片附件会以二进制方式存储在数据库中，与普通读取方式不同的是图片附件的读取为“流式”读取

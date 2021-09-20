@@ -218,7 +218,7 @@ exec DoAfterInsert 'B_Department','36.1',1,1,' and Department=''okok'''
 ```
 
 ### 相关附件下载
-<a href="./3.9.zip" download>附件下载</a>
+[附件下载](c3/09/3.9.zip ':ignore')
 
 ### 本节贡献者
 *@Meteor*  

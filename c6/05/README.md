@@ -3,7 +3,7 @@
 
 ![](./6.5.1.jpg)
 
-<a href="./6.5.2.xls" download>Excel下载</a>
+[Excel下载](c6/05/6.5.2.xls ':ignore')
 
 ### 本节贡献者
 *@傻木*

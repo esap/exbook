@@ -111,7 +111,8 @@ Cells(3, 2) = i
 Next i
 End Sub
 ```
-<a href="../src/4.3.xls" download>Excel下载</a>
+
+[Excel下载](c4/03/4.3.xls ':ignore')
 
 ### 本节贡献者
 *@Castle*  

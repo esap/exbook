@@ -28,22 +28,22 @@ End Sub
 
 - 资料下载：
 
-@清风版：<a href="./5.7.5.zip" download>模板下载</a>
+@清风版：[模板下载](c5/07/5.7.5.zip ':ignore')
 
-@荆州版：<a href="./5.7.6.zip" download>模板下载</a>
+@荆州版：[模板下载](c5/07/5.7.6.zip ':ignore')
 
 ### 老版本
 - 效果图:
 
 ![](./5.7.1.png?raw=true)
 
-<a href="./5.7.2.rar" download>模板下载</a>
+@荆州版：[模板下载](c5/07/5.7.2.rar ':ignore')
 
 - 老老方案Excel版：
 
-版本一：<a href="./5.7.3.xls" download>Excel下载</a>
+版本一：@荆州版：[模板下载](c5/07/5.7.3.xls ':ignore')
 
-版本二：<a href="./5.7.4.xls" download>Excel下载</a>
+版本二：[模板下载](c5/07/5.7.4.xls ':ignore')
 
 ### 补充
 * 2016版测试OK

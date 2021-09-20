@@ -1,5 +1,5 @@
 # 6.3 调用摄像头拍照
-<a href="/6.3.1.zip" download> Excel下载</a>
+[Excel下载](c6/03/6.3.1.zip ':ignore')
 
 ### 本节贡献者
 *@傻木*

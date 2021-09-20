@@ -20,7 +20,7 @@ FROM  dbo.销售单_明细
 
 ![](./5.9.3.png)
 
-<a href="./5.9.rar" download>模板下载</a>
+[模板下载](c5/09/5.9.rar ':ignore')
 
 ## 注意
 ROW_NUMBER()函数需要sqlserver 2005及以上版本才能支持，否则出现下列错误。

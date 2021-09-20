@@ -68,7 +68,7 @@ B:Customer 意思是 B列绑定 Customer这个字段。 中间是冒号":"隔开
 
 **有了这个工具，在超复杂的SQL语句摆在面前时，就不再纠结于是用各种辅助提数到晕倒，还是去使用存储过程后痛苦的处理页面填充了^_^  **
 
-最后是工具模块的超链接：<a href="./src/CopyFromProcResult.bas" download>CopyFromProcResult.bas</a>
+最后是工具模块的超链接：[CopyFromProcResult.bas](c5/13/CopyFromProcResult.bas ':ignore')
 
 ### 本节贡献者
 @Meteor

@@ -55,7 +55,7 @@ addpicture 的用法是 addpicture 图片路径,sheet,row,col 图片路径用 ge
 如果要是单一的图片的话， 直接 addpicture 不用 for 循环 
 
 ### VBA-Demo 
-<a href="./src/5.12.xls" download>Excel下载</a>
+[模板下载](c5/12/5.12.xls ':ignore')
 
 *** 此功能在慧表NX中可直接利用API提数完成 ***
 

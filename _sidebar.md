@@ -83,7 +83,7 @@
 * [6.其它分享](c6/)
 
  * [6.8 APP违章查询<span style="color:red">new!</span>](c6/08/) 
- * [6.0 APP身份证自动识别<span style="color:red">new!</span>](c6/09/)
+ * [6.9 APP身份证自动识别<span style="color:red">new!</span>](c6/09/)
  * [6.10 拥抱AI，玩转ESAP实现人脸识别<span style="color:red">new!</span>](c6/10/)
  * [6.11 NX界面DIY<span style="color:red">new!</span>](c6/11/)
  * [6.12 NX修改图标经验分享<span style="color:red">new!</span>](c6/12/)
