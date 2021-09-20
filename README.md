@@ -1,6 +1,6 @@
 ## EX宝典
 
-* 一本来自ESAP尹联®禅院的类EXCEL平台ERP开发应用百科全书，希望对你有帮助。
+* 一本来自ESAP尹联®禅院的ERP开发应用百科全书，希望对你有帮助。
 
 <span style="color:red">【B站ERP开发精粹视频教程】</span>：[https://space.bilibili.com/399421687](https://space.bilibili.com/399421687)
 
