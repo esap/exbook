@@ -536,3 +536,14 @@ dense_rank() over(order by 表不唯一字段) 可得到便于合并的相同顺
 > @火星人:支持js正则`=neval(neval("function aaa(s){ var reg = /[0-9\*]+/g;var arr = reg.exec(s);return arr[0];} aaa('" & G6 & "')"))`
 
 <img src="c1n/02/1002-neval.png" width="320">
+
+## 解决：工作流提交走完流程了还在第一个待办
+> @火星人:可执行下列sql刷新
+
+```sql
+update JU_WorkflowTask set TaskState = 3 
+where TaskID in(
+select PrevTaskID from JU_WorkflowTask where PrevTaskID in(
+select TaskID from JU_WorkflowTask where TaskState <> 3
+))
+```
