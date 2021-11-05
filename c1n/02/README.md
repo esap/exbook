@@ -547,3 +547,10 @@ select PrevTaskID from JU_WorkflowTask where PrevTaskID in(
 select TaskID from JU_WorkflowTask where TaskState <> 3
 ))
 ```
+
+## 解决：批量解锁工作流误点后被锁定
+> @火星人:可执行下列sql刷新
+
+```sql
+update JU_WorkflowTask set Locked = 0
+```
