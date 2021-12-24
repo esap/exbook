@@ -554,3 +554,13 @@ select TaskID from JU_WorkflowTask where TaskState <> 3
 ```sql
 update JU_WorkflowTask set Locked = 0
 ```
+
+## 解决：recordid改成bigint后，工作台删单报错
+> @老方：
+![](./1002-alterRefid.png)
+
+> @火星人:可执行下列sql刷新
+
+```sql
+alter table JU_SysLog alter column RefID varchar(64)
+```
