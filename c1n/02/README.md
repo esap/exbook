@@ -113,6 +113,23 @@ SET @TmpNo=@TmpNo+1
 END 
 ```
 
+## 寄生模式：让其它库表可以在NX中映射/显示/保存
+在表中加入NX系统字段即可
+```
+ALTER TABLE 表
+ADD 
+	[RecordID] int not null
+	,[CreateUser] int
+	,[CreateOrg] int
+	,[CreateTime] datetime default getdate()
+	,[EditingUser] int
+	,[LastEditUser] int
+	,[LastEditTime] datetime 
+	,[ReportStatus] int 
+	,[LockStatus] int
+	,[WorkflowStatus] nvarchar(256)
+```
+
 ## NX中的插件包
 自定义菜单等功能需要插件包，下载CEF包等后解压到`server/package`，重启服务即可。
 
